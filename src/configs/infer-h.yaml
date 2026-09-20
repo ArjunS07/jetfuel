@@ -1,0 +1,23 @@
+data:
+  jet_types: ["g"]
+  num_particles: 30
+
+# Checkpoints carry the H width, depth, and regulator; these are standalone defaults.
+model:
+  n_hidden: 96
+  n_layers: 6
+  regulator_mass: 0.1
+
+inference:
+  n_samples: 50000
+  batch_size: 128
+  integration_steps: 64
+  prior_dist: axis_aligned_per_jet
+  use_cfg: false
+  use_ema_weights: true
+  warn_invalid_fraction: 0.0
+  max_invalid_fraction: 0.001
+  skip_metrics: false
+
+paths:
+  cache_dir: /mnt/data/caches
